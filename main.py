@@ -194,19 +194,19 @@ def download_By_ChunkEncoding(link):
                             data = s.recv(BUFFER_SIZE)
                         else:
                             data = s.recv(n+2)
-                        print(data)
+                       
                         f.write(data)
                         f.flush()
 
                         n -= len(data)
                         if n + 2 == 0:
                             break
-                    print('Saving...')
+                    
             except:
                 pass
             if chunk_size <= 0:
                 break
-    print('Saving completed')
+    
     s.close()
 
 
